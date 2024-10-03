@@ -1,5 +1,6 @@
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html /var/www/html/index.html
-EXPOSE 80
+COPY html/ /var/www/html/index.html
+COPY ssl/ /etc/nginx/ssl/
+EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
