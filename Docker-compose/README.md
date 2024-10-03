@@ -31,15 +31,20 @@ This project demonstrates how to Dockerize a simple HTML page using Nginx as a w
 .
 ├── Dockerfile
 ├── docker-compose.yml
+├── html
+│   ├── index.html
+│   └── static
+│       ├── style.css
+│       └── script.js
 ├── nginx.conf
-├── ssl
-│   ├── server.crt
-│   ├── server.key
-├── index.html
-└── README.md
+└── ssl
+    ├── nginx-selfsigned.crt
+    └── nginx-selfsigned.key
+
 ```
 #### Files Details
-- **index.html:** The HTML page to be served.
+- **html/index.html:** The HTML page to be served.
+- **html/static/:** basic CSS and js file
 - **nginx.conf:** The Nginx configuration file to serve the index.html page.
 - **ssl/:** Folder containing SSL certificate and key files for HTTPS.
 - **Dockerfile:** The Dockerfile to build the Docker image.
@@ -64,7 +69,7 @@ docker run -d -p 80:80 -p 443:443 --name my-nginx-container my-nginx-html
 
 #### Step 3: Run with Docker Compose
 ```
-docker-compose up -d
+docker compose up -d
 ```
 ![docker-compose](./screenshots/Docker-compose-run.png)
 ![docker-compose](./screenshots/output-port80.png)
