@@ -12,3 +12,5 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf  
       - ./ssl:/etc/nginx/ssl                 
     container_name: my-nginx-app
+
+
