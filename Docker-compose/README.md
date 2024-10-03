@@ -66,6 +66,10 @@ docker run -d -p 80:80 -p 443:443 --name my-nginx-container my-nginx-html
 ```
 docker-compose up -d
 ```
+![docker-compose](./screenshots/Docker-compose-run.png)
+![docker-compose](./screenshots/output-port80.png)
+![docker-compose](./screenshots/cert.png)
+![docker-compose](./screenshots/output-port443.png)
 
 ## HTTPS Support
 This project includes support for HTTPS using a self-signed SSL certificate. The certificate and key files are stored in the ssl/ directory.
