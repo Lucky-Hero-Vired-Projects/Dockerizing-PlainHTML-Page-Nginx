@@ -61,3 +61,8 @@ Visit `http://54.185.66.181:8080/` to see the HTML page in action.
 [Public ECR Repo URL](https://us-west-2.console.aws.amazon.com/ecr/repositories/private/975050024946/lucky-repos/_/image/sha256:45e5995fff486bb1eb04f2f62ebe777632c294d50b5c3493b5981e3929610b1c/details?region=us-west-2)
 
 [ECR Image URI](975050024946.dkr.ecr.us-west-2.amazonaws.com/lucky-repos:latest)
+
+## Generate Certificates 
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
+```
